@@ -1,6 +1,10 @@
 # `mpu6050` ![crates.io](https://img.shields.io/crates/v/mpu6050.svg) ![CircleCI](https://img.shields.io/circleci/build/github/juliangaal/mpu6050.svg)
 > no_std driver for the MPU6050 6-axis IMU
 
+## Reason for forking
+compiling this library for avr didn't work because of an error in rand, which was required (not optional) by nalgebra. Since
+fixing nalgebra would probably be a lot harder I decided to just delete nalgebra, since I don't need fancy vector types anyway
+
 ## What Works
 * Reading the accelerometer, gyroscope, temperature sensor
     * raw
